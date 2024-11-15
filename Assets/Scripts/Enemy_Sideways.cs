@@ -22,6 +22,7 @@ public class Enemy_Sideways : MonoBehaviour
             if (transform.position.x > leftEdge)
             {
                 transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
+                transform.localScale = new Vector3(4,4,4);
             }
             else
                 movingLeft = false;
@@ -31,6 +32,7 @@ public class Enemy_Sideways : MonoBehaviour
             if (transform.position.x < rightEdge)
             {
                 transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
+                transform.localScale = new Vector3(-4, 4, 4);
             }
             else
                 movingLeft = true;
